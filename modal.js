@@ -1,5 +1,5 @@
 
-// Overture et fermeture du formulaire
+// Instruction  fonction affichage responsive
 
 export function editNav() {
     let x = document.getElementById("myTopnav");
@@ -11,25 +11,25 @@ export function editNav() {
     }
 }
 
-// Overture et fermeture du formulaire avec JAVASRIPT
+// Instruction déclaration des constantes
 
 const openModalBtn = document.querySelectorAll('.modal-btn');
 const closeModalBtn = document.querySelector('#js-close-modal');
 const modalbg = document.querySelector("#js-modal");
 
-// DOM Elements
+// Instruction Elements DOM à selectionnés pour ouverture et la fermerture du modal
 
 openModalBtn.modalbg = document.querySelector(".modal-bground");
+closeModalBtn.modalBtn = document.querySelector('#js-close-modal');
 
-// launch modal dysplay
+// Instruction fonctions à exécutées lors de l'ouverture et la fermeture du modal
+
+     // launch modal dysplay ouverture du modal
 
  export function launchModal() {
    modalbg.style.display = "block";
 }
-
-closeModalBtn.modalBtn = document.querySelector('#js-close-modal');
-
-// toggle modal form
+     // toggle modal form  fermeture du modal
 
  export function toggleModal() {
    modalbg.style.display = "none"; 
