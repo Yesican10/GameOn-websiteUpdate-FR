@@ -1,9 +1,13 @@
 
+/* Déclaration des propriétés personnalisées */
+
   :root {
      --font-default: "DM Sans", Arial, Helvetica, sans-serif;
      --font-slab: var(--font-default);
      --modal-duration: 0.8s;
-}
+} 
+
+/* Propriété appliquée à n'importe quel type d'élément */
 
   *    {
      box-sizing: border-box;
@@ -11,7 +15,7 @@
      padding: 0;
 }
 
-/* Landing Page */
+/* Styler structure de la page web */
 
   body {
      margin: 0;
@@ -21,33 +25,39 @@
      font-family: var(--font-default);
      font-size: 18px;
 }
-
+  main {     
+     font-weight: bolder;
+     color: black;
+     padding-left: 4vw;
+     padding-right: 6vw;
+     margin: 1px 20px 15px;
+     border-radius: 2rem;
+     text-align: justify;
+}
   p {
      margin-bottom: 0;
      padding: 0.5vw;
 }
-
   img {
      padding-left: 28px;
      width: 215px;
      padding-top: 7px;
      height: 29px;  
 }
+ 
+/* Styler  menu principal et logo  */
 
   .topnav {
      overflow: hidden;
      margin: 3.5%;
 }
-
   .header-logo {
      float: left;   
 }
-
   .main-navbar {
      float: right;
      margin-right: 30px;
 }
-
   .topnav a {
      float: left;
      display: block;
@@ -59,7 +69,6 @@
      font-size: 11px;
      font-family: Roboto, sans-serif;
 }
-
   .topnav a:hover {
      background-color: #ff0000;
      color: #ffffff;
@@ -68,7 +77,6 @@
      padding-bottom: 6px;
      margin-top: 10px;
 }
-
   .topnav a.active {
      background-color: #ff0000;
      color: #ffffff;
@@ -78,20 +86,11 @@
      margin-top: 8px;
      text-decoration: underline;
 }
-
   .topnav .icon {
      display: none;
 }
 
-  main {     
-     font-weight: bolder;
-     color: black;
-     padding-left: 4vw;
-     padding-right: 6vw;
-     margin: 1px 20px 15px;
-     border-radius: 2rem;
-     text-align: justify;
-}
+/* Styler  pied de page  */
 
   .footer {
      margin: 20px;
