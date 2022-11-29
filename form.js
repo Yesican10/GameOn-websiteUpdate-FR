@@ -1,6 +1,5 @@
 
-// Valider le FORMULAIRE avec JAVASRIPT
-
+// Validation du FORMULAIRE avec JAVASRIPT
 
   export const formData = document.querySelectorAll(".formData");
 
@@ -10,9 +9,9 @@
 
 }
 
-// Rendre les CHAMPS du forumaire obligatoire sous conditions
+// Déclaration des fonctions à exporter pour rendre les champs du formulaire obligatoires sous conditions
   
-  // Valider champ case à cocher
+  // Instruction pour champ case à cocher valider
 
   export const isValidCheckbox = () => {
 
@@ -32,7 +31,7 @@
 
      if (!selectedCheckbox) {
 
-  //vérification erreur 
+  // Instruction d'erreur pour champ case à cocher vide
 
        error.innerHTML = 'Vous devez accepter les termes et condition';
 
@@ -43,7 +42,7 @@
     return true
 }
 
-  // Valider champ radios
+  // Instruction pour champ radios valider
 
   export const isValidRadios = () => { 
   
@@ -63,7 +62,7 @@
 
      if (!selectedCountry) {
 
-       //vérification erreur
+       // Instruction d'erreur pour champ radios vide
 
        error.innerHTML = 'Vous devez selectionner un pays';
 
@@ -74,7 +73,7 @@
     return true    
 }
  
-  // Valider champ tournois 
+  // Instruction pour champ tournois  valider
   
   export const isValidTournois = () => {
 
@@ -82,7 +81,7 @@
 
     if (quantity.value.trim() === '') {
 
-  // vérification erreur
+  // Instruction d'erreur pour champ tournois vide
 
       let  error = document.getElementById('error-quantity');
            error.innerHTML = 'Vous devez entrer votre nombre de tournois';
@@ -95,7 +94,7 @@
     return true;
 }
 
-  // Valider champ date Birsthdays
+  // Instruction pour champ date Birsthdays  valider
 
   export const isValidBirthdays = () => {
 
@@ -103,7 +102,7 @@
 
     if (birthdays.value.trim() === '') {
 
- // vérification erreur
+ // Instruction d'erreur pour champ date Birsthdays vide
 
       let  error = document.getElementById('error-birthdays');
            error.innerHTML = 'Vous devez entrer votre date de naissance';
@@ -116,7 +115,7 @@
     return true;
 }
 
-  // Valider champ adresse Email
+  // Instruction pour champ adresse Email valider 
 
   export const isValidEmail = () => {
 
@@ -126,7 +125,7 @@
 
     if (email.value.trim() === '') {
 
-  //vérification erreur
+  // Instruction d'erreur pour champ adresse Email vide
 
     let  error = document.getElementById('error-email');
          error.innerHTML = 'Vous devez entrer votre email';
@@ -139,7 +138,7 @@
     return true;
 }
 
-  // Validate INPUT firstName
+  // Instruction pour champ INPUT firstName valider 
 
   export const isValidFirstname = () => {
 
@@ -147,7 +146,7 @@
 
     if (firstName.value.trim() === '') {
 
-  //vérification erreur
+  //  Instruction d'erreur pour champ INPUT firstName vide
 
     let error = document.getElementById('error-firstName');
         error.innerHTML = 'Vous devez entrer votre prénom'; 
@@ -158,7 +157,7 @@
       
     } else if (firstName.length < 2) {
 
-  //vérification erreur
+  // Instruction d'erreur pour champ firstName tailles des caractères
 
       let  error = document.getElementById('error-firstName');     
            error.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du prénom';
@@ -171,7 +170,7 @@
     return true;
 }
 
-  // Validate INPUT lastName
+  // Instruction pour champ INPUT lastName valider 
 
   export const isValidLastname = () => {
 
@@ -179,7 +178,7 @@
 
     if (lastName.value.trim() === '') {
 
-  //vérification erreur
+  //  Instruction d'erreur pour champ INPUT lastName vide
 
       let  error = document.getElementById('error-lastName');
            error.innerHTML = 'Vous devez entrer votre nom';
@@ -192,7 +191,7 @@
 
     else if (lastName.length < 2) {
 
-  //vérification erreur
+  // Instruction d'erreur pour champ lastName tailles des caractères
 
       let  error = document.getElementById('error-lastName');
            error.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom';
