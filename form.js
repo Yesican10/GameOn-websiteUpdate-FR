@@ -1,4 +1,5 @@
 
+
 // Validation du FORMULAIRE avec JAVASRIPT
 
   export const formData = document.querySelectorAll(".formData");
@@ -15,7 +16,7 @@
 
   export const isValidCheckbox = () => {
 
-    let checkboxx = document.querySelectorAll('input[type="checkbox"')
+    let checkboxx = document.querySelectorAll('input[type="checkbox"]')
     let error = document.getElementById('error-checkbox');
     let selectedCheckbox;
 
@@ -29,16 +30,23 @@
       }
     }
 
+    // Instruction d'erreur pour champ case à cocher vide
+
      if (!selectedCheckbox) {
 
-  // Instruction d'erreur pour champ case à cocher vide
-
        error.innerHTML = 'Vous devez accepter les termes et condition';
+      
 
       return false
 
     }
      
+    // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
+
+    else {
+      document.getElementById('error-checkbox').innerHTML = "";
+    }
+
     return true
 }
 
@@ -60,20 +68,25 @@
       }        
     }
 
+    // Instruction d'erreur pour champ radios vide
+
      if (!selectedCountry) {
 
-       // Instruction d'erreur pour champ radios vide
-
        error.innerHTML = 'Vous devez selectionner un pays';
-
+       
       return false
-
     }
 
-    return true    
+    // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
+
+    else {
+      document.getElementById('error-radiosButton').innerHTML = "";
+    }
+
+    return true
 }
  
-  // Instruction pour champ tournois  valider
+   // Instruction pour champ tournois  valider
   
   export const isValidTournois = () => {
 
@@ -81,20 +94,27 @@
 
     if (quantity.value.trim() === '') {
 
-  // Instruction d'erreur pour champ tournois vide
+   // Instruction d'erreur pour champ tournois vide
 
       let  error = document.getElementById('error-quantity');
            error.innerHTML = 'Vous devez entrer votre nombre de tournois';
            error.style.color = 'red';
            quantity.style.borderColor = 'red';
+           quantity.focus()
        
       return false;
     }
 
-    return true;
-}
+    // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
 
-  // Instruction pour champ date Birsthdays  valider
+    else {
+      document.getElementById('error-quantity').innerHTML = "";
+    }
+
+    return true
+}
+ 
+   // Instruction pour champ date Birsthdays  valider
 
   export const isValidBirthdays = () => {
 
@@ -102,17 +122,24 @@
 
     if (birthdays.value.trim() === '') {
 
- // Instruction d'erreur pour champ date Birsthdays vide
+  // Instruction d'erreur pour champ date Birsthdays vide
 
       let  error = document.getElementById('error-birthdays');
            error.innerHTML = 'Vous devez entrer votre date de naissance';
            error.style.color = 'red';
            birthdays.style.borderColor = 'red';
+           birthdays.focus()
       
       return false;
     }
 
-    return true;
+    // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
+
+    else {
+      document.getElementById('error-birthdays').innerHTML = "";
+    }
+
+    return true
 }
 
   // Instruction pour champ adresse Email valider 
@@ -131,11 +158,18 @@
          error.innerHTML = 'Vous devez entrer votre email';
          error.style.color = 'red';
          email.style.borderColor = 'red';
+         email.focus()
         
       return false;
     }
 
-    return true;
+    // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
+
+    else {
+      document.getElementById('error-email').innerHTML = "";
+    }
+
+    return true
 }
 
   // Instruction pour champ INPUT firstName valider 
@@ -152,23 +186,33 @@
         error.innerHTML = 'Vous devez entrer votre prénom'; 
         error.style.color = 'red';
         firstName.style.borderColor = 'red';
-      
-      return false;
-      
-    } else if (firstName.length < 2) {
+        firstName.focus();
 
-  // Instruction d'erreur pour champ firstName tailles des caractères
-
-      let  error = document.getElementById('error-firstName');     
-           error.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du prénom';
-           error.style.color = 'red';
-           firstName.style.borderColor = 'red';
-      
       return false;
+    } 
+
+    else if (firstName.length < 2) {
+
+      // Instruction d'erreur pour champ firstName tailles des caractères
+    
+          let  error = document.getElementById('error-firstName');     
+               error.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du prénom';
+               error.style.color = 'red';
+               firstName.style.borderColor = 'red';
+               firstName.focus();
+               
+          return false;
+        }
+
+        // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
+
+    else {
+      document.getElementById('error-firstName').innerHTML = "";
     }
 
-    return true;
-}
+    return true
+    
+  } 
 
   // Instruction pour champ INPUT lastName valider 
 
@@ -184,6 +228,7 @@
            error.innerHTML = 'Vous devez entrer votre nom';
            error.style.color = 'red'; 
            lastName.style.borderColor = 'red';
+           lastName.focus();
   
       return false;
       
@@ -197,9 +242,16 @@
            error.innerHTML = 'Veuillez entrer 2 caractères ou plus pour le champ du nom';
            error.style.color = 'red';
            lastName.style.borderColor = 'red';
-      
+           lastName.focus();
+   
       return false;
     }
 
-    return true;
+    // retire l'erreur pour que l'utilisateur puisse entrer une nouvelle valeur
+
+    else {
+      document.getElementById('error-lastName').innerHTML = "";
+    }
+ 
+    return true
 }
